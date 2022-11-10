@@ -10,12 +10,9 @@ def h(w,x):
 def loss(w,x,y):
     return 0.5*np.sum((y.T - h(w,x))**2)
 def grad_descent(w,x,y):
-    return w := w + 0.1*(Y.T - h()) @ X
+    return  w + 0.1*(Y.T - h()) @ X
 for i in range(100):
     print(f"{i}: {loss()}")
-    grad_descent()
+    w = grad_descent()
 
 print(f"Final: {loss()} {w}")
-
-    
-
